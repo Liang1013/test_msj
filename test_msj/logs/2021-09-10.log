@@ -1,0 +1,8 @@
+2021-09-10 15:00:38,020 test_tool_tkl.py [line:27] INFO ----------开始执行测试用例----------
+2021-09-10 15:00:49,830 base.py [line:49] ERROR css selector 页面未能找到此.ant-message>span>div>div>div>span 元素
+2021-09-10 15:00:49,830 base.py [line:49] ERROR css selector 页面未能找到此.ant-message>span>div>div>div>span 元素
+2021-09-10 15:00:49,831 test_tool_tkl.py [line:46] INFO 淘口令验证失败
+2021-09-10 15:00:49,831 test_tool_tkl.py [line:31] INFO --------------pass---------------
+2021-09-10 15:02:58,602 test_tool_tkl.py [line:27] INFO ----------开始执行测试用例----------
+2021-09-10 15:03:00,527 test_tool_tkl.py [line:44] INFO 淘口令官方接口返回失败，断言成功
+2021-09-10 15:03:00,528 test_tool_tkl.py [line:31] INFO --------------pass---------------
