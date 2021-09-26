@@ -1,0 +1,11 @@
+#测试环境
+test:
+  url: https://jcrmweb.maimiaotech.com/#/login
+  username: **********
+  password: **********
+
+#生产环境
+production:
+  url: https://msj.maimiaotech.com/#/login
+  username: **********
+  password: **********

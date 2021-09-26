@@ -85,3 +85,14 @@ class Base():
         '''
         ActionChains(self.driver).move_to_element(
             self.js_find_element(locale)).perform()
+
+    def js_double_clear(self,locale):
+        '''
+        封装输入框双击事件
+        :param locale: 使用与clear方法失效，使用此方法实现情况作用
+        :return:
+        '''
+        ActionChains(self.driver).double_click(
+            self.js_find_element(locale)).perform()
+
+

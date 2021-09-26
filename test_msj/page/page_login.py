@@ -1,5 +1,6 @@
 from common.base import Base
 from selenium import webdriver
+from common.route import Route
 
 import time
 
@@ -13,9 +14,6 @@ ID = "id"
     CLASS_NAME = "class name"
     CSS_SELECTOR = "css selector"
 '''
-
-test_url = "https://jcrmweb.maimiaotech.com/#/login"   #测试环境
-url = "https://msj.maimiaotech.com/#/login"            #线上地址
 
 class PageLogin(Base):
 
@@ -38,11 +36,12 @@ class PageLogin(Base):
     def is_bth(self):
         self.js_click(self.bth)
 
-    def is_login(self,user="*********",paw="********"):
-        self.driver.get(url)       #打开登陆地址
-        self.driver.maximize_window()   #窗口最大化
-        self.is_input(user)
-        self.is_paw(paw)
+    def is_login(self):
+        self.parameter = Route().js_route_url("production") ##production生产环境地址，test测试环境地址
+        self.driver.get(self.parameter["url"]) #打开登陆地址
+        self.driver.maximize_window() #窗口最大化
+        self.is_input(self.parameter["username"])
+        self.is_paw(self.parameter["password"])
         self.is_bth()
 
     def is_login_text(self,suc,text):

@@ -5,10 +5,6 @@ from common.logger import Log
 
 import unittest,ddt
 
-
-test_url = "https://jcrmweb.maimiaotech.com/#/login"   #测试环境
-url = "https://msj.maimiaotech.com/#/login"            #线上地址
-
 ecl = Route().js_route_execl("login.xlsx")
 
 @ddt.ddt
@@ -18,10 +14,11 @@ class TestLogin(unittest.TestCase):
     def setUp(self) -> None:
         self.logger = Log("TestLogin").get_log()
         self.rou = Route().js_route_chrome()
+        self.testurl = Route().js_route_url("production") #production生产环境地址，test测试环境地址
         self.driver = webdriver.Chrome(self.rou)
         self.log = PageLogin(self.driver)
         self.driver.maximize_window()
-        self.driver.get(test_url)
+        self.driver.get(self.testurl["url"])
         self.logger.info("----------开始执行测试用例----------")
 
     @classmethod

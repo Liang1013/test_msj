@@ -1,0 +1,15 @@
+2021-09-26 16:35:02,054 base.py [line:33] ERROR css selector 页面未能找到此.content-container-form>form>div:nth-child(1)>div>div>span>input 元素
+2021-09-26 16:36:44,841 base.py [line:48] ERROR css selector 页面未能找到此.ant-message>span>div>div>div>span 元素
+2021-09-26 16:37:39,186 base.py [line:48] ERROR css selector 页面未能找到此.ant-message>span>div>div>div>span 元素
+2021-09-26 16:43:19,167 test_login.py [line:22] INFO ----------开始执行测试用例----------
+2021-09-26 16:43:20,180 test_login.py [line:44] INFO msj登陆成功
+2021-09-26 16:43:20,181 test_login.py [line:26] INFO --------------pass---------------
+2021-09-26 16:43:25,475 test_login.py [line:22] INFO ----------开始执行测试用例----------
+2021-09-26 16:43:25,475 test_login.py [line:22] INFO ----------开始执行测试用例----------
+2021-09-26 16:43:26,420 test_login.py [line:44] INFO msj登陆成功
+2021-09-26 16:43:26,420 test_login.py [line:44] INFO msj登陆成功
+2021-09-26 16:43:26,421 test_login.py [line:26] INFO --------------pass---------------
+2021-09-26 16:43:26,421 test_login.py [line:26] INFO --------------pass---------------
+2021-09-26 16:46:05,524 base.py [line:48] ERROR css selector 页面未能找到此.ant-message>span>div>div>div>span 元素
+2021-09-26 16:46:53,304 base.py [line:48] ERROR css selector 页面未能找到此.ant-message>span>div>div>div>span 元素
+2021-09-26 16:47:45,440 base.py [line:48] ERROR css selector 页面未能找到此.ant-message>span>div>div>div>span 元素

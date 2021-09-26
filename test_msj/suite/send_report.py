@@ -28,9 +28,9 @@ class SendReport():
 
 
     '''发送邮件'''
-    smtp_recv = "******@163.com"
+    smtp_recv = "123@163.com"
     m = SendMail(
-        username="*****@163.com",passwd="123456",
+        username="123@163.com",passwd="123456",
         recv=smtp_recv,title="自动化测试报告",file=reportpath
     )
     m.send_mail()
