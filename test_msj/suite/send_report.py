@@ -13,7 +13,7 @@ class SendReport():
     '''
     discover = unittest.defaultTestLoader.discover(start_dir=
                                                    Route().js_route_report("case"),
-                                                   pattern="test_login.py")
+                                                   pattern="test*.py")
 
     # 获取写入报告路 已二进制写入路径下
     reportpath = Route().js_route_report("report/" + "reprot.html")
