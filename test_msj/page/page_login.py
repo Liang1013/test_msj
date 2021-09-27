@@ -37,9 +37,9 @@ class PageLogin(Base):
         self.js_click(self.bth)
 
     def is_login(self):
-        self.parameter = Route().js_route_url("production") ##production生产环境地址，test测试环境地址
-        self.driver.get(self.parameter["url"]) #打开登陆地址
-        self.driver.maximize_window() #窗口最大化
+        self.parameter = Route().js_route_url("production") #production生产环境地址，test测试环境地址
+        self.driver.get(self.parameter["url"])              #打开登陆地址
+        self.driver.maximize_window()                       #窗口最大化
         self.is_input(self.parameter["username"])
         self.is_paw(self.parameter["password"])
         self.is_bth()

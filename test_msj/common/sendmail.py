@@ -10,7 +10,7 @@ from common.logger import Log
 log = Log('run').get_log()
 class SendMail(object):
 
-    def __init__(self, username, passwd, recv, title, file=None, email_host='smtp.163.com', port=25):
+    def __init__(self, username, passwd, recv, title, email_host,file=None , port=25):
         '''
         发送邮件封装
         :param username: 发送者账号
@@ -58,12 +58,12 @@ class SendMail(object):
     def __del__(self):
         self.smtp.quit()
 
-
 if __name__ == '__main__':
-    reportpath = Route().is_report("report/") + "report.html"
-    smtp_receiver = ['1123@163.com']
+    reportpath = Route().js_route_report("report/") + "reprot.html"
+    parameter = Route().js_route_mail("mail")
+    smtp_receiver = parameter["smtp_receiver"]
     m = SendMail(
-        username='123@163.com', passwd='123456', recv= smtp_receiver,
-        title='自动化测试报告',file=reportpath
+        username= parameter["username"], passwd= parameter["password"], recv= smtp_receiver,
+        title='自动化测试报告',email_host= parameter["email_stmp"],file=reportpath
     )
     m.send_mail()

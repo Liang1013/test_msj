@@ -13,7 +13,7 @@ class SendReport():
     '''
     discover = unittest.defaultTestLoader.discover(start_dir=
                                                    Route().js_route_report("case"),
-                                                   pattern="test*.py")
+                                                   pattern="test_login.py")
 
     # 获取写入报告路 已二进制写入路径下
     reportpath = Route().js_route_report("report/" + "reprot.html")
@@ -28,9 +28,10 @@ class SendReport():
 
 
     '''发送邮件'''
-    smtp_recv = "123@163.com"
+    parameter = Route().js_route_mail("mail")
+    smtp_receiver = parameter["smtp_receiver"]
     m = SendMail(
-        username="123@163.com",passwd="123456",
-        recv=smtp_recv,title="自动化测试报告",file=reportpath
+        username=parameter["username"], passwd=parameter["password"], recv=smtp_receiver,
+        title='自动化测试报告', email_host=parameter["email_stmp"],file=reportpath
     )
     m.send_mail()

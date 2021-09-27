@@ -1,0 +1,6 @@
+#邮箱
+mail:
+  email_stmp: smtp.qq.com             #邮箱服务器地址 smtp.163.com   smtp.qq.com   smtp.mxhichina.com
+  username: **********                #发送邮件者
+  password: **********                #发送邮箱授权码   
+  smtp_receiver: ["**********"]       #收件人
